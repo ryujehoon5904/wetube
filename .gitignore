@@ -1,0 +1,120 @@
+node_modules
+
+# 로그
+로그
+*.로그
+npm-debug.log *
+yarn-debug.log *
+yarn-error.log *
+lerna-debug.log *
+
+# 진단 보고서 (https://nodejs.org/api/report.html)
+report. [0-9] *. [0-9] *. [0-9] *. [0-9] *. json
+
+# 런타임 데이터
+pids
+* .pid
+*.씨
+* .pid.lock
+
+# jscoverage / JSCover에 의해 생성 된 계측 된 라이브러리 용 디렉토리
+lib-cov
+
+# 이스탄불과 같은 도구에서 사용하는 커버리지 디렉토리
+적용 범위
+* .lcov
+
+# 뉴욕 테스트 범위
+.nyc_output
+
+# Grunt 중간 저장소 (https://gruntjs.com/creating-plugins#storing-task-files)
+.꿀꿀 거리는 소리
+
+# Bower 종속성 디렉토리 (https://bower.io/)
+bower_components
+
+# node-waf 구성
+.lock-wscript
+
+# 컴파일 된 바이너리 애드온 (https://nodejs.org/api/addons.html)
+빌드 / 릴리스
+
+# 종속성 디렉토리
+node_modules /
+jspm_packages /
+
+# Snowpack 종속성 디렉터리 (https://snowpack.dev/)
+web_modules /
+
+# TypeScript 캐시
+* .tsbuildinfo
+
+# 선택적 npm 캐시 디렉토리
+.npm
+
+# 선택적 eslint 캐시
+.eslintcache
+
+# 마이크로 번들 캐시
+.rpt2_cache /
+.rts2_cache_cjs /
+.rts2_cache_es /
+.rts2_cache_umd /
+
+# 선택적 REPL 기록
+.node_repl_history
+
+# 'npm pack'의 출력
+* .tgz
+
+# 원사 무결성 파일
+.yarn-integrity
+
+# dotenv 환경 변수 파일
+.env
+.env.test
+
+# parcel-bundler 캐시 (https://parceljs.org/)
+.은닉처
+.parcel-cache
+
+# Next.js 빌드 출력
+.다음
+밖
+
+# Nuxt.js 빌드 / 출력 생성
+.nuxt
+dist
+
+# 개츠비 파일
+.은닉처/
+# 프로젝트가 Next.js가 아닌 Gatsby를 사용하는 경우 공개 라인에 주석을 추가합니다.
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# 공공의
+
+# vuepress 빌드 출력
+.vuepress / dist
+
+# 서버리스 디렉토리
+.serverless /
+
+# FuseBox 캐시
+.퓨즈 박스/
+
+# DynamoDB 로컬 파일
+.dynamodb /
+
+# TernJS 포트 파일
+.tern-port
+
+# VSCode 확장을 테스트하는 데 사용되는 VSCode 버전을 저장합니다.
+.vscode-test
+
+# 원사 v2
+.yarn / cache
+.yarn / unplugged
+.yarn / build-state.yml
+.yarn / install-state.gz
+.pnp. *
+
+package-lock.json
