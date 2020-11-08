@@ -1,3 +1,5 @@
+//-  페이지의 일부분
+
 header.header
     .header__column
         a(href=routes.home)
@@ -5,6 +7,7 @@ header.header
     .header__column
         form(action=routes.search, method="get")
             input(type="text", placeholder="Search by term..", name="term")
+            //- 검색창에 검색한 값을 "term"에다가 담아두겠다고 생각해도 좋음/ serach?term="검색값"
     .header__column
         ul
             li

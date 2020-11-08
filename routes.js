@@ -1,10 +1,13 @@
 
+
+//url 접속경로의 집합. 
+
 // Global 
 const HOME = "/";
-const JOIN = "/join";
-const LOGIN = "/login";
-const LOGOUT = "/logout";
-const SEARCH = "/search";
+const JOIN = "/join"; // 회원가입
+const LOGIN = "/login"; // 로그인
+const LOGOUT = "/logout"; // 로그아웃
+const SEARCH = "/search"; //검색
 
 // Users (USER 만을 위한)
 const USERS = "/users";
@@ -27,7 +30,7 @@ const routes = {
     login: LOGIN,
     logout: LOGOUT,
     search: SEARCH,
-    user: USERS,
+    users: USERS,
     userDetail: USER_DETAIL,
     editProfile: EDIT_PROFILE,
     changePassword: CHANGE_PASSWORD,

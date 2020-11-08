@@ -2,9 +2,13 @@ doctype html
 html
     head
         link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.15.0/css/all.css", integrity="sha384-OLYO0LymqQ+uHXELyx93kblK5YIS3B2ZfLGBmsJaUyor7CpMTBsahDHByqSuWW+q", crossorigin="anonymous")
+        //- font awesome CDN
         title #{pageTitle} | #{siteName}
     body
         include ../partials/header
         main
             block content
         include ../partials/footer
+
+//-  layout이나 부분적으로 적용되는 header나 footer를 별도로 관리 하는 게 편함. include와 함께  _ 레이아웃이 될 파일에는 공통된 마크업을 넣되, 페이지마다 달라지는 부분을 block 으로 비워둔다. block은 여러개 만들어도 되고, block은 block [블록명]으로 선언 
+
