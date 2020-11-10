@@ -4,8 +4,8 @@
 //export const home = (req, res) => res.render("home", { pageTitle: "Home"});
 // 함수의 인자를 (req, res) 라고 하는거 일뿐이고, 이름은 중요하지 않다. 다만 기능상 req는 요청부분이고, res는 그 요청에 대한 응답부분이다. next는 그 처리의 중간값 
 import { videos } from "../db";
-//db.js에서 파일에서 videos 목록 import
-
+//db.js에서 파일에서 videos 목록 import { } 으로 import하는건 default 로 export하지 않은 경우
+import routes from "../routes"
 
 export const home = (req, res) => {
     res.render("home", { pageTitle: "Home", videos:videos });
@@ -25,8 +25,16 @@ export const search = (req, res) => {
 
 // export const videos = (req, res) => res.render("videos", { pageTitle: "Videos"});
 
-export const upload = (req, res) => 
+export const getUpload = (req, res) => 
     res.render("upload", { pageTitle: "Upload"});
+
+export const postUpload = (req, res) => {
+    const {
+        body: { file, title, description }        
+    } = req;
+    res.redirect(routes.videoDetail())
+};
+
 
 export const videoDetail = (req, res) => 
     res.render("videoDetail", { pageTitle: "Video Detal"});

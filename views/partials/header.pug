@@ -10,8 +10,17 @@ header.header
             //- 검색창에 검색한 값을 "term"에다가 담아두겠다고 생각해도 좋음/ serach?term="검색값"
     .header__column
         ul
-            li
-                a(href=routes.join) Join
+            if !user.isAuthenticated
+                li
+                    a(href=routes.join) Join
                 
-            li
-                a(href=routes.login) LOGIN
+                li
+                    a(href=routes.login) LOGIN
+            else
+                li
+                    a(href=`/videos/${routes.upload}`) Upload
+                    //- routes의 설정상 /videos/ 연결안해주면, /upload만 되서 연결오류
+                li
+                    a(href=routes.userDetail(user.id)) Profile
+                li
+                    a(href=routes.logout) Log out
