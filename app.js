@@ -6,6 +6,8 @@ import morgan from "morgan";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
+// 회원가입할때(join) body-parser가 없으면, 사용자 정보를 가져올수없음 ?
+
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import globalRouter from "./routers/globalRouter";

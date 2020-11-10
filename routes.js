@@ -13,7 +13,7 @@ const SEARCH = "/search"; //검색
 const USERS = "/users";
 const USER_DETAIL = "/:id";
 // /:id 의 경우 express가 값이 변화는 거(:)라는 인지하게 된다. /id 는 단순히 text로 인식
-const EDIT_PROFILE = "/edit-pfofile";
+const EDIT_PROFILE = "/edit-profile";
 const CHANGE_PASSWORD = "/change-password";
 
 // Videos (VIDEOS ROUTER)

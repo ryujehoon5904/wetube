@@ -1,8 +1,16 @@
 
 // globalRouter.js
 
-export const home = (req, res) => res.render("home", { pageTitle: "Home"});
+//export const home = (req, res) => res.render("home", { pageTitle: "Home"});
 // 함수의 인자를 (req, res) 라고 하는거 일뿐이고, 이름은 중요하지 않다. 다만 기능상 req는 요청부분이고, res는 그 요청에 대한 응답부분이다. next는 그 처리의 중간값 
+import { videos } from "../db";
+//db.js에서 파일에서 videos 목록 import
+
+
+export const home = (req, res) => {
+    res.render("home", { pageTitle: "Home", videos:videos });
+  };
+// videos: videos -> video 로 줄여서 사용 가능 
 
 export const search = (req, res) => {
     //console.log(req.query.term);     -> term에가 검색값을 담았고, , const serchingBy = req.query.term; 요청한 값중에서 key 가 term 인것의 value 찾기. 
@@ -10,17 +18,24 @@ export const search = (req, res) => {
         query: {term : searchingBy}    
     } = req;
     // = const searchingBy = req.query.term;
-    res.render("search", { pageTitle: "Search", searchingBy });
+    res.render("search", { pageTitle: "Search", searchingBy, videos });
 }; 
 //  =   res.render("search", { pageTitle: "Search", searchingBy: searchingBy});
 
 
-export const videos = (req, res) => res.render("videos", { pageTitle: "Videos"});
+// export const videos = (req, res) => res.render("videos", { pageTitle: "Videos"});
 
-export const upload = (req, res) => res.render("upload", { pageTitle: "Upload"});
-export const videoDetail = (req, res) => res.render("videoDetail", { pageTitle: "VideoDetal"});
-export const editVideo = (req, res) => res.render("editVideo",{ pageTitle: "EditVideo"});
-export const deleteVideo = (req, res) => res.render("deleteVideo", { pageTitle: "DeleteVideo"});
+export const upload = (req, res) => 
+    res.render("upload", { pageTitle: "Upload"});
+
+export const videoDetail = (req, res) => 
+    res.render("videoDetail", { pageTitle: "Video Detal"});
+
+export const editVideo = (req, res) => 
+    res.render("editVideo",{ pageTitle: "Edit Video"});
+
+export const deleteVideo = (req, res) => 
+    res.render("deleteVideo", { pageTitle: "Delete Video"});
 
 
 /* express 의 req, res 객체

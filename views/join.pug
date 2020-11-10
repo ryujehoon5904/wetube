@@ -2,7 +2,7 @@ extends layouts/main.pug
 
 block content
    .form-container
-        form(action=routes.join, method="post")
+        form(action=routes.postjoin, method="post")
             input(type="text", placeholder="Full Name", name="name")
             input(type="eamil",placeholder="Email", name="email")
             input(type="password", placeholder="Password", name="password")

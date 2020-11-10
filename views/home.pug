@@ -1,11 +1,18 @@
 extends layouts/main.pug
 //-  레이아웃을 가져오겠다. 
+include mixins/videoBlock
 
 block content
     .videos
-        h1 Video 
-        //- each item in videos
-        //-     h1= item.title
-        //-     p= item.description 
+        each item in videos
+            +videoBlock({
+                title:item.title,
+                views:item.views,
+                videoFile:item.videoFile
+            })
+
+            //- h1= item.title
+            //- p= item.description 
 
 //- each in : 반복문 
+//- h1 tag 사용. db.js에서 videos를 item에 담는다. item (videos가 담긴)의 타이틀을 표시, description을 표시. video는 변수명이고, item은 그냥 이름 . 아무거나 사용해도 괜찮음 , iteration (반복)

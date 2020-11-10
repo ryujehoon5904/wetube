@@ -1,7 +1,6 @@
 extends layouts/main.pug
 
 block content
-    p Edit Video 
     .form-container
         form(action=`/videos${routes.editVideo}`, method="post")
             input(type="text", placeholder="Title", name="title")
