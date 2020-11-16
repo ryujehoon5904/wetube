@@ -2,6 +2,7 @@
 // homt, join, login, search 
 
 import express from "express";
+
 import { 
     getjoin,
     getLogin,
@@ -9,7 +10,11 @@ import {
     postjoin,
     postLogin
 } from "../controller/userController";
-import { home, search } from "../controller/videoController";
+import { 
+    home, 
+    search 
+} from "../controller/videoController";
+
 import routes from "../routes";
 
 const globalRouter = express.Router();
